@@ -14,7 +14,14 @@ def run_detection(model,img):
     return results
 
 def main():
-    st.title("Detection d'objets avec YOLOv5 et Streamlit")
+    st.set_page_config(
+    page_title="Object Detection using YOLOv5 and Streamlit",  # Setting page title
+    page_icon="🤖",     # Setting page icon
+    layout="wide",      # Setting layout to wide
+    initial_sidebar_state="expanded"    # Expanding sidebar by default
+    )
+
+    #st.title("Detection d'objets avec YOLOv5 et Streamlit")
     model = load_model()
 
     files = st.file_uploader("Téléchargez une ou plusieurs images",type=["jpg","jpeg","png"],accept_multiple_files=True)

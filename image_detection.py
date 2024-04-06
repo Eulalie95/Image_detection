@@ -29,7 +29,7 @@ def main():
 
                 #le nombre de visages détectés
                 face_count = len(results.xyxy[0])
-                st.write("Nombre d'objets détectés:{face_count}")
+                st.write(f"Nombre d'objets détectés:{face_count}")
 
 if __name__ == "__main__":
     main()
